@@ -63,7 +63,7 @@ if __name__ == '__main__':
         client = MongoClient()
         db = client.taskdb
         db.east.drop()
-        print 'east collection has been dropped!'
+        print('east collection has been dropped!')
 
         mongotool.dump()
         mongotool.drop()

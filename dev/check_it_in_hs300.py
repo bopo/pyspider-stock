@@ -16,7 +16,7 @@ for line in it_file:
     line = line.replace('\n','')
     line = line.decode('utf8')
     if line not in hs300:
-        print line
+        print(line)
         out.write(str(line)+'\n')
         num+=1
-print num
+print(num)

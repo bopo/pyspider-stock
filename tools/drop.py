@@ -4,6 +4,7 @@ client = MongoClient()
 db = client['stockcodes']
 documents = db.HS300.find()
 stockcodes = []
+
 for document in documents:
     stockcodes.append(document['stockcode'])
 

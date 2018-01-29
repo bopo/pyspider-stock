@@ -107,7 +107,7 @@ class Handler(BaseHandler):
         item['create'] = time
         try:
             item['created_at'] = int(re.findall('\d{9}',response.url)[0])
-        except IndexError,e:
+        except IndexError as e:
             item['created_at'] = int(re.findall('\d{8}',response.url)[0])
         return item
         

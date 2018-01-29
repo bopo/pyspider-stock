@@ -11,10 +11,13 @@ import time
 import re
 
 import datetime
+import coloredlogs
 from pymongo import MongoClient
 from pyspider.database.base.resultdb import ResultDB as BaseResultDB
 from .mongodbbase import SplitTableMixin
+
 logger = logging.getLogger("result")
+coloredlogs.install(level='DEBUG', logger=logger)
 
 class ResultDB(SplitTableMixin, BaseResultDB):
     collection_prefix = ''
@@ -114,7 +117,7 @@ class ResultDB(SplitTableMixin, BaseResultDB):
                 obj = {
                     'name' : result['name'],
                     'text' : result['text'],
-                    'time' : long(result['time']),
+                    'time' : int(result['time']),
                     'title' : result['title'],
 
                 }
@@ -122,7 +125,7 @@ class ResultDB(SplitTableMixin, BaseResultDB):
                 obj = {
                     'name' : result['name'],
                     'text' : result['text'],
-                    'time' : long(result['time']),
+                    'time' : int(result['time']),
                     # 'title' : result['title'],
 
                 }
@@ -138,7 +141,7 @@ class ResultDB(SplitTableMixin, BaseResultDB):
             obj = {
                     'author' : result['author'],
                     'comment' : result['comment'],
-                    'read' : long(result['read']),
+                    'read' : int(result['read']),
                     'title' : result['title'],
                     'text' : result['text'],
                     'tid' : result['tid'],

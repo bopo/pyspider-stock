@@ -25,4 +25,4 @@ def aggregate(stockcode, date):
             "last_date": date
         })
 
-    print date+stockcode+'SentimentFactor has been aggregated!'
+    print(date+stockcode+'SentimentFactor has been aggregated!')

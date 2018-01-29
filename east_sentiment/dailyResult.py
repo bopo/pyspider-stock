@@ -31,9 +31,9 @@ def setDailyResult(stockcode,date,section_name=''):
                 "daily_counts": dailyCounts
             }
         )
-    except UnboundLocalError,e:
+    except UnboundLocalError as e:
         pass
 
-    print date+stockcode+'has been set in daily result!'
+    print(date+stockcode+'has been set in daily result!')
 
 

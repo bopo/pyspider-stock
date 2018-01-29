@@ -13,5 +13,5 @@ for stockcode in stockcodes:
     result = db.HS300.insert_one({
         "stockcode" : stockcode
     })
-    print result.inserted_id
+    print(result.inserted_id)
 f.close()
